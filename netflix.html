@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+</head>
+<style>
+    body {
+        background:
+            linear-gradient(rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.75)),
+            url("netflix.jpg");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    h1 {
+        margin: 2%;
+        text-align: center;
+        justify-content: center;
+        padding: 20px;
+        color: rgb(165, 14, 14);
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .main {
+        margin: 2%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: x-large;
+        color: rgb(18, 148, 187);
+    }
+
+    p {
+        justify-content: start;
+        align-items: start;
+        margin-right: 4%;
+        margin-bottom: 3%;
+        margin-top: 5px;
+        color: whitesmoke;
+    }
+
+    .main form {
+        width: 400px;
+        height: 50px;
+        margin-bottom: 5px;
+        background-color: rgb(224, 209, 209);
+        font-size: medium;
+        cursor: text;
+        justify-content: center;
+        align-items: center;
+        margin-left: 520px;
+        padding: 20px;;
+    }
+
+    #tap {
+        background-color: rgb(151, 29, 29);
+        cursor: pointer;
+    }
+
+    #icon {
+        cursor: pointer;
+    }
+</style>
+<script>
+
+    function toggle() {
+        let p = document.getElementById("pwd");
+        let icon = document.getElementById("icon");
+
+        if (p.type === "password") {
+            p.type = "text";
+            icon.textContent = "🙈";
+        } else {
+            p.type = "password";
+            icon.textContent = "👁️";
+        }
+    }
+
+    function showalert() {
+        window.alert("you have successfully logged in ");
+    }
+
+</script>
+
+<body>
+    <h1>NETFLIX</h1>
+    <div class="main">
+        <h2>Enter your info to sign in</h2>
+        <p>or get started with a new account.</p>
+        <form action="forms.com/api" method="GET">
+            <label for="Email">Email</label>
+            <input type="text" placeholder="Email or Mobile No." />
+            <br>
+            <label for="Password">Password</label>
+            <input type="password" id="pwd">
+            <span onclick="toggle()" id="icon">👁️</span>
+            <button id="tap" onclick="showalert()">Continue</button>
+        </form>
+        <br>
+        <br>
+    </div>
+</body>
+
+</html>
